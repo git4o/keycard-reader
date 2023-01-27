@@ -2,11 +2,10 @@ radio.onReceivedNumber(function (receivedNumber) {
     if (No == 0) {
         if (receivedNumber == 22) {
             load(3)
-            ring.clear()
-            basic.showIcon(IconNames.Yes)
             ring.showColor(neopixel.colors(NeoPixelColors.Green))
             basic.showIcon(IconNames.Yes)
             basic.pause(1000)
+            basic.showIcon(IconNames.Yes)
             ring.showColor(neopixel.colors(NeoPixelColors.Black))
             No = 1
         }
