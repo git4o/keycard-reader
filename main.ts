@@ -4,6 +4,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             load(3)
             ring.showColor(neopixel.colors(NeoPixelColors.Green))
             basic.showIcon(IconNames.Yes)
+            music.playMelody("G G A C5 C5 C5 - - ", 500)
             basic.pause(1000)
             basic.showIcon(IconNames.Yes)
             ring.showColor(neopixel.colors(NeoPixelColors.Black))
