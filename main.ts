@@ -1,12 +1,15 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    if (receivedNumber == 22) {
-        load(5)
-        ring.clear()
-        basic.showIcon(IconNames.Yes)
-        ring.showColor(neopixel.colors(NeoPixelColors.Green))
-        basic.showIcon(IconNames.Yes)
-        basic.pause(2000)
-        ring.clear()
+    if (No == 0) {
+        if (receivedNumber == 22) {
+            load(3)
+            ring.clear()
+            basic.showIcon(IconNames.Yes)
+            ring.showColor(neopixel.colors(NeoPixelColors.Green))
+            basic.showIcon(IconNames.Yes)
+            basic.pause(1000)
+            ring.showColor(neopixel.colors(NeoPixelColors.Black))
+            No = 1
+        }
     }
 })
 function load (times: number) {
@@ -26,6 +29,7 @@ function load (times: number) {
         }
     }
 }
+let No = 0
 let ring: neopixel.Strip = null
 radio.setGroup(1)
 ring = neopixel.create(DigitalPin.P2, 16, NeoPixelMode.RGB)
@@ -37,4 +41,7 @@ basic.forever(function () {
         . # # # .
         . . # . .
         `)
+    if (No == 1) {
+        basic.pause(1000)
+    }
 })
