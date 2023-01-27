@@ -1,12 +1,12 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 22) {
-        let strip: neopixel.Strip = null
         load(5)
         ring.clear()
         basic.showIcon(IconNames.Yes)
         ring.showColor(neopixel.colors(NeoPixelColors.Green))
+        basic.showIcon(IconNames.Yes)
         basic.pause(2000)
-        strip.clear()
+        ring.clear()
     }
 })
 function load (times: number) {
