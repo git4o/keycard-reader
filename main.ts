@@ -43,5 +43,6 @@ basic.forever(function () {
         `)
     if (No == 1) {
         basic.pause(1000)
+        No = 0
     }
 })
